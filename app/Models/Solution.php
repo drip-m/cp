@@ -11,8 +11,8 @@ class Solution extends Model
         'title', 'class_id', 'description','image'
     ];
 
-    public function solutionClass()
+    public function class()
     {
-        $this->belongsTo(SolutionClass::class);
+        return $this->belongsTo(SolutionClass::class);
     }
 }

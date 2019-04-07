@@ -15,8 +15,8 @@ class SolutionClass extends Model
         return $this->hasMany(Solution::class);
     }
 
-    // 获取所有的方案分类
-    public function getClass()
+    // 查询所有的方案分类
+    public static function getClass()
     {
         $class = DB::table('solution_classes')->get();
         $options = [];

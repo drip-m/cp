@@ -22,4 +22,15 @@ Route::group([
     $router->get('class/{id}/edit', 'ProductClassesController@edit');
     $router->put('class/{id}', 'ProductClassesController@update');
 
+    $router->get('solution_class', 'SolutionClassesController@index');
+    $router->get('solution_class/create', 'SolutionClassesController@create');
+    $router->post('solution_class', 'SolutionClassesController@store');
+    $router->get('solution_class/{id}/edit', 'SolutionClassesController@edit');
+    $router->put('solution_class/{id}', 'SolutionClassesController@update');
+
+    $router->get('solution', 'SolutionsController@index');
+    $router->get('solution/create', 'SolutionsController@create');
+    $router->post('solution', 'SolutionsController@store');
+    $router->get('solution/{id}/edit', 'SolutionsController@edit');
+    $router->put('solution/{id}', 'SolutionsController@update');
 });

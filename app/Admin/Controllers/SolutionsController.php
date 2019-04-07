@@ -2,16 +2,16 @@
 
 namespace App\Admin\Controllers;
 
-use App\Models\Product;
+use App\Models\Solution;
 use App\Http\Controllers\Controller;
+use App\Models\SolutionClass;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
-use App\Models\ProductClass;
 
-class ProductsController extends Controller
+class SolutionsController extends Controller
 {
     use HasResourceActions;
 
@@ -24,7 +24,7 @@ class ProductsController extends Controller
     public function index(Content $content)
     {
         return $content
-            ->header('产品列表')
+            ->header('解决方案列表')
             ->body($this->grid());
     }
 
@@ -38,7 +38,7 @@ class ProductsController extends Controller
     public function edit($id, Content $content)
     {
         return $content
-            ->header('编辑产品')
+            ->header('编辑解决方案')
             ->body($this->form()->edit($id));
     }
 
@@ -51,7 +51,7 @@ class ProductsController extends Controller
     public function create(Content $content)
     {
         return $content
-            ->header('创建产品')
+            ->header('创建解决方案')
             ->body($this->form());
     }
 
@@ -62,11 +62,11 @@ class ProductsController extends Controller
      */
     protected function grid()
     {
-        $grid = new Grid(new Product);
+        $grid = new Grid(new Solution);
 
         $grid->id('Id');
         $grid->class()->title('分类名称');
-        $grid->title('产品名称');
+        $grid->title('解决方案名称');
         $grid->created_at('创建时间');
 
         // 禁用导出
@@ -94,11 +94,11 @@ class ProductsController extends Controller
      */
     protected function form()
     {
-        $form = new Form(new Product);
+        $form = new Form(new Solution);
 
-        $form->select('class_id', '分类ID')->options(ProductClass::getClass())->rules('required|numeric');
-        $form->text('title', '产品名称')->rules('required');
-        $form->image('image', '产品封面图片')->rules('required');
+        $form->select('class_id', '分类ID')->options(SolutionClass::getClass())->rules('required|numeric');
+        $form->text('title', '解决方案名称')->rules('required');
+        $form->image('image', '解决方案封面图片')->rules('required');
         $form->editor('description', '详情');
 
         // 取消编辑页面的详情和删除按钮
