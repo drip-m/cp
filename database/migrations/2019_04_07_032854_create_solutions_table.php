@@ -15,6 +15,10 @@ class CreateSolutionsTable extends Migration
     {
         Schema::create('solutions', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('class_id'); // 解决方案分类ID
+            $table->string('title'); // 方案名称
+            $table->text('description'); // 方案详情
+            $table->string('image'); // 方案封面图片文件路径
             $table->timestamps();
         });
     }

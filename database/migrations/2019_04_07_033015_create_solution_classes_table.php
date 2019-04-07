@@ -15,6 +15,7 @@ class CreateSolutionClassesTable extends Migration
     {
         Schema::create('solution_classes', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('title');
             $table->timestamps();
         });
     }
