@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDownloadClassesTable extends Migration
+class CreateDownloadsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateDownloadClassesTable extends Migration
      */
     public function up()
     {
-        Schema::create('download_classes', function (Blueprint $table) {
+        Schema::create('downloads', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('class_id');
+            $table->string('title');
+            $table->string('url');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateDownloadClassesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('download_classes');
+        Schema::dropIfExists('downloads');
     }
 }
