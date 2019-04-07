@@ -9,6 +9,7 @@ use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
+use App\Models\ProductClass;
 
 class ProductsController extends Controller
 {
@@ -28,21 +29,6 @@ class ProductsController extends Controller
     }
 
     /**
-     * Show interface.
-     *
-     * @param mixed   $id
-     * @param Content $content
-     * @return Content
-     */
-    public function show($id, Content $content)
-    {
-        return $content
-            ->header('Detail')
-            ->description('description')
-            ->body($this->detail($id));
-    }
-
-    /**
      * Edit interface.
      *
      * @param mixed   $id
@@ -52,8 +38,7 @@ class ProductsController extends Controller
     public function edit($id, Content $content)
     {
         return $content
-            ->header('Edit')
-            ->description('description')
+            ->header('编辑产品')
             ->body($this->form()->edit($id));
     }
 
@@ -66,8 +51,7 @@ class ProductsController extends Controller
     public function create(Content $content)
     {
         return $content
-            ->header('Create')
-            ->description('description')
+            ->header('创建产品')
             ->body($this->form());
     }
 
@@ -81,7 +65,7 @@ class ProductsController extends Controller
         $grid = new Grid(new Product);
 
         $grid->id('Id');
-        $grid->class_id('分类 id');
+        $grid->class()->title('分类名称');
         $grid->title('产品名称');
         $grid->created_at('创建时间');
 
@@ -91,28 +75,16 @@ class ProductsController extends Controller
         // 禁用行选择checkbox
         $grid->disableRowSelector();
 
+        $grid->actions(function ($actions) {
+            // 不在每一行后面展示查看按钮
+            $actions->disableView();
+            // 不在每一行后面展示删除按钮
+            $actions->disableDelete();
+//            // 不在每一行后面展示编辑按钮
+//            $actions->disableEdit();
+        });
+
         return $grid;
-    }
-
-    /**
-     * Make a show builder.
-     *
-     * @param mixed   $id
-     * @return Show
-     */
-    protected function detail($id)
-    {
-        $show = new Show(Product::findOrFail($id));
-
-        $show->id('Id');
-        $show->class_id('Class id');
-        $show->title('Title');
-        $show->description('Description');
-        $show->image('Image');
-        $show->created_at('Created at');
-        $show->updated_at('Updated at');
-
-        return $show;
     }
 
     /**
@@ -124,10 +96,16 @@ class ProductsController extends Controller
     {
         $form = new Form(new Product);
 
-        $form->number('class_id', 'Class id');
-        $form->text('title', 'Title');
-        $form->textarea('description', 'Description');
-        $form->image('image', 'Image');
+        $form->select('class_id', '分类ID')->options(ProductClass::getClass())->rules('required|numeric');
+        $form->text('title', 'Title')->rules('required');
+        $form->image('image', 'Image')->rules('required');
+        $form->editor('description', 'Description');
+
+        // 取消编辑页面的详情和删除按钮
+        $form->tools(function (Form\Tools $tools) {
+            $tools->disableView();
+            $tools->disableDelete();
+        });
 
         return $form;
     }
