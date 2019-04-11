@@ -2,7 +2,7 @@
 <div class="ny_lx">
 <div class="ny_lx_1"><b>联系我们</b></div>
 </div>
-<div class="ny_lx_2"><img src="css/images/lx_dh.png"></div>
+<div class="ny_lx_2"><img src="{{ URL::asset('css/images/lx_dh.png') }}"></div>
 <div class="kj_3_2">
 <ul>
 <li class="a">{{ env('APP_NAME', 'Laravel') }}</li>

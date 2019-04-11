@@ -93,8 +93,8 @@ a.gotoptop_icon:hover{background-position:0px 0px;}
 .product table td img{border:1px solid #ececec;margin:0 5px 0 5px;}
 
 .product_pic{display:block;}
-.product_pic li{float:left;text-align:center;padding:10px 17px 30px 17px;display:inline;width:215px;}
-.product_pic li img{border:1px solid #ececec;width:215px;height:300px;}
+.product_pic li{float:left;text-align:center;padding:0px 4px 10px 17px;display:inline;}
+.product_pic li img{border:1px solid #ececec;width:167px;height:200px;}
 .product_pic li .title{display:block;text-align:center;}
 
 .product_pic_infor{display:block;}

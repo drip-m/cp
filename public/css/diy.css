@@ -94,7 +94,7 @@
 
 /*底部*/
 .dbd{background:#474747;width:1100px;margin:0 auto;height:270px;}
-.dbd_1{width:1100px;margin:0 auto;text-align:center;padding-top:20px;}
+.dbd_1{width:1100px;margin:0 auto;text-align:center;padding-top:110px;}
 .dbd_1 a{font-size:16px;cfont-family:"Microsoft YaHei";}
 .dbd_2{width:210px;margin:0 auto;text-align:center;margin-top:10px;}
 .dbd_2 ul{clear:both;overflow:hidden;}
@@ -113,7 +113,7 @@
 .ny_ly_t{width:700px;margin:0 auto;margin-bottom:20px;}
 .ny_ly_t img{width:700px;height:200px;}
 
-#.lxfs{border:1px solid #CCCCCC;}
+/*.lxfs{border:1px solid #CCCCCC;}*/
 .lxfs li{height:50px;line-height:50px;padding-left:30px;color:#1E387B;font-family:"Microsoft YaHei";}
 .lxfs .a{background:url(images/lxfs_1.jpg) no-repeat 2px 15px;}
 .lxfs .b{background:url(images/lxfs_1.jpg) no-repeat 2px 15px;}

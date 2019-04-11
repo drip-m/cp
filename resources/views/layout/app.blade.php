@@ -26,36 +26,36 @@
 	</div>
 	<div class="dbd_2">
 		<ul align="center">
-			<li>
-				<a href=""><img src="css/images/db_1.png" /></a>
-			</li>
+			{{--<li>--}}
+				{{--<a href=""><img src="{{ URL::asset('css/images/db_1.png') }}" /></a>--}}
+			{{--</li>--}}
 <!-- 			<li>
 				<a href=""><img src="css/images/db_2.png" /></a>
 			</li>
 			<li>
 				<a href=""><img src="css/images/db_3.png" /></a>
 			</li> -->
-			<li>
-				<a href=""><img src="css/images/db_4.png" /></a>
-			</li>
+			{{--<li>--}}
+				{{--<a href=""><img src="{{ URL::asset('css/images/db_4.png') }}" /></a>--}}
+			{{--</li>--}}
 		</ul>
 	</div>
-	<div class="dbd_3">
-		<div class="dbd_3_1">
-			<ul>
-				<li>
-					地址：山东省济南市经四路万达广场B座1103室
-				</li>
-				<li>
-					电话：0531-87039611
-				</li>
-			</ul>
-		</div>
-		<div class="dbd_3_2">
-			<img src="css/images/dbd_ew.jpg" /> 
-		</div>
-	</div>
+	{{--<div class="dbd_3">--}}
+		{{--<div class="dbd_3_1">--}}
+			{{--<ul>--}}
+				{{--<li>--}}
+					{{--地址：山东省济南市经四路万达广场B座1103室--}}
+				{{--</li>--}}
+				{{--<li>--}}
+					{{--电话：0531-87039611--}}
+				{{--</li>--}}
+			{{--</ul>--}}
+		{{--</div>--}}
+		{{--<div class="dbd_3_2">--}}
+			{{--<img src="{{ URL::asset('css/images/dbd_ew.jpg') }}" />--}}
+		{{--</div>--}}
+	{{--</div>--}}
 	<p align="center">
-		本模板基于PageAdmin<a target="_blank" href="http://www.pageadmin.net/">网站管理系统</a>制作 Copyright <span style="font-family:Arial;">&copy;</span> 2008-2009&nbsp;&nbsp; PageAdmin <a target="_blank" href="http://www.pageadmin.net/">CMS</a><a href="http://www.pageadmin.net/" target="_blank"></a> 
+		Copyright <span style="font-family:Arial;">&copy;</span> 2018-2019&nbsp;&nbsp; 济南日新极星机电设备有限公司 鲁ICP备19015619号
 	</p>
 </div></div></div></body></html>

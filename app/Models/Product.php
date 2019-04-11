@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use DB;
 
 class Product extends Model
 {
@@ -15,5 +16,17 @@ class Product extends Model
     public function class()
     {
         return $this->belongsTo(ProductClass::class);
+    }
+
+    public static function getProdcuts($limit='', $class='', $title= '')
+    {
+        $where = ' where 1=1 ';
+        $where .= $class ? " AND class_id = " . $class : "";
+        if (!empty($title)) {
+            $where .= " AND title = '" . $title . "'";
+        }
+        $num = $limit ? ' limit ' . $limit : '';
+        $products = DB::select('select * from products ' . $where . $num);
+        return $products;
     }
 }
