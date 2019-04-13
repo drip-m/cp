@@ -16,7 +16,7 @@
                         <div id="nav_menu_108" class="nav_menu">
                             <ul id="rootul_108">
                                 <li id="sl534"><a href="#" class="sla534">联系方式</a></li>
-                                <li id="sl535"><a href="#" class="sla535">在线留言</a></li>
+                                {{--<li id="sl535"><a href="#" class="sla535">在线留言</a></li>--}}
                             </ul>
                         </div>
                     </div>
@@ -73,7 +73,7 @@
                                         技术支持 : 13589024277
                                     </li>
                                     <li class="g">
-                                        URL : http://www.xxxxxx.com
+                                        URL : {{ env('APP_URL') }}
                                     </li>
                                 </ul>
                             </div>
