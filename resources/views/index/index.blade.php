@@ -133,7 +133,7 @@
                                         <img style="height: 282px;" src="images/erweima.jpg" alt="">
                                     </li>
                                     <li style="margin-top:-32px;font-size: 20px;" class="ly_3">QQ: 352164624</li>
-                                    <li style="font-size: 20px;" class="ly_3">手机: 137xxxxxxxx</li>
+                                    <li style="font-size: 20px;" class="ly_3">手机: 18615250808</li>
 
                                     {{--<li style="float: left; width: 80px; height: 25px;line-height:25px;color:#5A5A5A;font-weight:bold;font-size:14px;">--}}
                                         {{--验证码：--}}
