@@ -51,6 +51,13 @@ class IndexController extends Controller
         return view('index.product', compact('class', 'products'));
     }
 
+    // 产品详情
+    public function productDetail(Request $request, Product $product)
+    {
+        $detail = Product::getProductByID($request->id);
+        return view('index.product_detail', compact('detail'));
+    }
+
     // 解决方案
     public function solution(Request $request)
     {
@@ -63,9 +70,10 @@ class IndexController extends Controller
     }
 
     // 解决方案详情
-    public function solutionDetail(Solution $solution)
+    public function solutionDetail(Request $request, Solution $solution)
     {
-        return view('index.solution_detail', compact('solution'));
+        $detail = Solution::getSolutionByID($request->id);
+        return view('index.solution_detail', compact('detail'));
     }
 
     // 工程案例

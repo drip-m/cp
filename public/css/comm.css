@@ -94,7 +94,7 @@ a.gotoptop_icon:hover{background-position:0px 0px;}
 
 .product_pic{display:block;}
 .product_pic li{float:left;text-align:center;padding:0px 4px 10px 17px;display:inline;}
-.product_pic li img{border:1px solid #ececec;width:167px;height:200px;}
+.product_pic li img{border:1px solid #ececec;width:166px;height:166px;}
 .product_pic li .title{display:block;text-align:center;}
 
 .product_pic_infor{display:block;}

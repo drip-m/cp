@@ -11,14 +11,14 @@
 .tj_con ul{clear:both;overflow:hidden;}
 .tj_con li{float:left;width:245px;text-align:center;}
 .tj_con li span{width:245px;display:block;}
-.tj_con_1{background:url(images/tj_1.jpg) no-repeat 45px 0;padding-top:170px;}
-.tj_con_2{background:url(images/tj_2.jpg) no-repeat 45px 0;;padding-top:170px;}
-.tj_con_3{background:url(images/tj_3.jpg) no-repeat 45px 0;;padding-top:170px;}
-.tj_con_4{background:url(images/tj_4.jpg) no-repeat 45px 0;;padding-top:170px;}
-.tj_con_1:hover{background:url(images/tj_1.png) no-repeat 45px 2px;}
-.tj_con_2:hover{background:url(images/tj_2.png) no-repeat 47px 1px;}
-.tj_con_3:hover{background:url(images/tj_3.png) no-repeat 45px 2px;}
-.tj_con_4:hover{background:url(images/tj_4.png) no-repeat 47px 1px;}
+.tj_con_1{background:url(images/11.jpg) no-repeat 45px 0;padding-top:170px;}
+.tj_con_2{background:url(images/22.jpg) no-repeat 45px 0;;padding-top:170px;}
+.tj_con_3{background:url(images/33.jpg) no-repeat 45px 0;;padding-top:170px;}
+.tj_con_4{background:url(images/44.jpg) no-repeat 45px 0;;padding-top:170px;}
+/*.tj_con_1:hover{background:url(images/tj_1.png) no-repeat 45px 2px;}*/
+/*.tj_con_2:hover{background:url(images/tj_2.png) no-repeat 47px 1px;}*/
+/*.tj_con_3:hover{background:url(images/tj_3.png) no-repeat 45px 2px;}*/
+/*.tj_con_4:hover{background:url(images/tj_4.png) no-repeat 47px 1px;}*/
 .tj_con_1 a{color:#1E387B;font-weight:bold;}
 .tj_con_2 a{color:#1E387B;font-weight:bold;}
 .tj_con_3 a{color:#1E387B;font-weight:bold;}

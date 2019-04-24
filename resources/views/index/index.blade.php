@@ -43,17 +43,42 @@
                 </div>
                 <div class="tj_con">
                     <ul>
-                        <li class="tj_con_1"><a href="#">工业机械</a></li>
-                        <li class="tj_con_2"><a href="#">工业机床</a></li>
-                        <li class="tj_con_3"><a href="#">工业工具</a></li>
-                        <li class="tj_con_4"><a href="#">工业五金</a></li>
+                        <li class="tj_con_1"><a href="{{ route('product', 7) }}">传感器产品</a></li>
+                        <li class="tj_con_2"><a href="{{ route('product', 6) }}">恒温恒湿控制柜</a></li>
+                        <li class="tj_con_3"><a href="{{ route('product', 2) }}">霍尼韦尔自控产品</a></li>
+                        <li class="tj_con_4"><a href="{{ route('product', 4) }}">西门子自控产品</a></li>
                     </ul>
+                </div>
+
+
+
+
+                <div class="sy_con_1">
+                    <div class="title">
+                        <img src="css/images/sy_1.png"/><span>Solution</span>解决方案
+                    </div>
+                    <div class="mero">
+                        <a href="{{ route('solution') }}">More+</a>
+                    </div>
+                </div>
+                <div class="cp_con">
+                    <ul class="product_pic">
+                        @foreach ($solutions as $s)
+                        <li style="width:185px;height:275px;">
+                            <a href="{{ route('solution_detail', $s->id )}}" target="_self"><img src="upload/{{ $s->image }}"
+                                                            border="0" style="width:200px;height:200px;"></a>
+                            <span class="title">
+<a href="{{ route('solution_detail', $s->id )}}" target="_self" title="HL-193">{{ $s->title}}</a></span>
+                        </li>
+                        @endforeach
+                    </ul>
+
                 </div>
 
 
                 <div class="sy_con_1">
                     <div class="title">
-                        <img src="css/images/sy_1.png"/><span>About us</span>关于我们
+                        <img src="css/images/sy_2.png"/><span>About us</span>关于我们
                     </div>
                     <div class="mero">
                         <a href="{{ route('about') }}">More+</a>
@@ -71,29 +96,6 @@
                         <br/>
                     </div>
                 </div>
-
-                <div class="sy_con_1">
-                    <div class="title">
-                        <img src="css/images/sy_2.png"/><span>Solution</span>解决方案
-                    </div>
-                    <div class="mero">
-                        <a href="{{ route('solution') }}">More+</a>
-                    </div>
-                </div>
-                <div class="cp_con">
-                    <ul class="product_pic">
-                        @foreach ($solutions as $s)
-                        <li style="width:185px;height:275px;">
-                            <a href="{{ route('solution_detail', $s->id )}}" target="_self"><img src="upload/{{ $s->image }}"
-                                                            border="0" style="width:185px;height:275px;"></a>
-                            <span class="title">
-<a href="{{ route('solution_detail', $s->id )}}" target="_self" title="HL-193">{{ $s->title}}</a></span>
-                        </li>
-                        @endforeach
-                    </ul>
-
-                </div>
-
 
                 <div class="sy_con_2">
                     <div class="title">
@@ -114,31 +116,33 @@
                         <form action="aspx/post.aspx" method="post" enctype="multipart/form-data" name="feedback">
                             <div>
                                 <ul>
-                                    <li class="ly_1">您的姓名</li>
-                                    <li><input class="f_tb" id="pa_truename" maxlength="30" size="10" name="pa_truename"
-                                               type="text"
-                                               style="width:450px;height:30px;border:1px #C2D1D7 solid;border-radius:3px;"/>
-                                    </li>
-                                    <li class="ly_2">联系方式</li>
-                                    <li><input class="f_tb" id="pa_tel" maxlength="30" size="12" name="pa_tel"
-                                               type="text"
-                                               style="width:450px;height:30px;border:1px #C2D1D7 solid;border-radius:3px;"/>
-                                    </li>
+                                    {{--<li class="ly_1">您的姓名</li>--}}
+                                    {{--<li><input class="f_tb" id="pa_truename" maxlength="30" size="10" name="pa_truename"--}}
+                                               {{--type="text"--}}
+                                               {{--style="width:450px;height:30px;border:1px #C2D1D7 solid;border-radius:3px;"/>--}}
+                                    {{--</li>--}}
+                                    {{--<li class="ly_2">联系方式</li>--}}
+                                    {{--<li><input class="f_tb" id="pa_tel" maxlength="30" size="12" name="pa_tel"--}}
+                                               {{--type="text"--}}
+                                               {{--style="width:450px;height:30px;border:1px #C2D1D7 solid;border-radius:3px;"/>--}}
+                                    {{--</li>--}}
 
 
-                                    <li class="ly_3">所需产品型号及说明</li>
-                                    <li><textarea id="content" name="content" rows="5" cols="70" class="f_tb"
-                                                  style="width:450px;border:1px #C2D1D7 solid;border-radius:3px;"></textarea>
+                                    <li class="ly_3">微信二维码</li>
+                                    <li>
+                                        <img style="height: 282px;" src="images/erweima.jpg" alt="">
                                     </li>
+                                    <li style="margin-top:-32px;font-size: 20px;" class="ly_3">QQ: 352164624</li>
+                                    <li style="font-size: 20px;" class="ly_3">手机: 137xxxxxxxx</li>
 
-                                    <li style="float: left; width: 80px; height: 25px;line-height:25px;color:#5A5A5A;font-weight:bold;font-size:14px;">
-                                        验证码：
-                                    </li>
-                                    <li style="float: left"><input class="f_tb" id="vcode" maxlength="4" size="4"
-                                                                   name="vcode" type="text"
-                                                                   style="width:80px;border:1px #C2D1D7 solid;border-radius:3px;height:25px"/>
-                                    </li>
-                                    <li style="clear: both;font-size: 1px; line-height:0px; height:2px">&nbsp;</li>
+                                    {{--<li style="float: left; width: 80px; height: 25px;line-height:25px;color:#5A5A5A;font-weight:bold;font-size:14px;">--}}
+                                        {{--验证码：--}}
+                                    {{--</li>--}}
+                                    {{--<li style="float: left"><input class="f_tb" id="vcode" maxlength="4" size="4"--}}
+                                                                   {{--name="vcode" type="text"--}}
+                                                                   {{--style="width:80px;border:1px #C2D1D7 solid;border-radius:3px;height:25px"/>--}}
+                                    {{--</li>--}}
+                                    {{--<li style="clear: both;font-size: 1px; line-height:0px; height:2px">&nbsp;</li>--}}
                                     {{--<li style="clear: both;padding:5px 0 5px 0px"><input class="ok" type="button"--}}
                                                                                          {{--onclick="return set_feedback()"--}}
                                                                                          {{--value=" 提交 "/>--}}

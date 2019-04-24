@@ -46,7 +46,7 @@
 
                                 @foreach ($products as $product)
                                 <li>
-                                    <a href="#" target="_self"><img
+                                    <a href="{{ route('product_detail', $product->id) }}" target="_self"><img
                                                 src="{{ URL::asset('upload/'. $product->image) }}"
                                                 border="0"></a>
                                     <span class="title">

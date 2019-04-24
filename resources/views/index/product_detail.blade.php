@@ -10,7 +10,7 @@
                 <div class="main_box_inner_left">
                     <div id="nav_106" class="nav_box nav_box_menu">
 
-                        <div class="nav_title"><span class="nav_sign">方案详情</span><span class="nav_more"></span></div>
+                        <div class="nav_title"><span class="nav_sign">产品详情</span><span class="nav_more"></span></div>
                         <div class="en_sign">detail</div>
                         <div id="nav_menu_106" class="nav_menu">
                         </div>
@@ -27,7 +27,7 @@
                 <div class="main_box_inner_right">
                     <div class="current_location current_location_538">
                         <ul>
-                            <li class="current_location_1">当前位置：<a href=/>首页</a> &gt;方案详情
+                            <li class="current_location_1">当前位置：<a href=/>首页</a> &gt;产品详情
                             </li>
                         </ul>
                     </div>

@@ -29,4 +29,9 @@ class Product extends Model
         $products = DB::select('select * from products ' . $where . $num);
         return $products;
     }
+
+    public static function getProductByID($id)
+    {
+        return DB::table('products')->find($id);
+    }
 }

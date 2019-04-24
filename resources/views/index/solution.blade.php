@@ -41,7 +41,7 @@
 
                                 @foreach ($solutions as $solution)
                                 <li>
-                                    <a href="#" target="_self"><img
+                                    <a href="{{ route('solution_detail', $solution->id) }}" target="_self"><img
                                                 src="{{ URL::asset('upload/' . $solution->image) }}"
                                                 border="0"></a>
                                     <span class="title">
