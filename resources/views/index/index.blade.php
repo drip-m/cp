@@ -43,10 +43,10 @@
                 </div>
                 <div class="tj_con">
                     <ul>
-                        <li class="tj_con_1"><a href="{{ route('product', 7) }}">传感器产品</a></li>
-                        <li class="tj_con_2"><a href="{{ route('product', 6) }}">恒温恒湿控制柜</a></li>
-                        <li class="tj_con_3"><a href="{{ route('product', 2) }}">霍尼韦尔自控产品</a></li>
-                        <li class="tj_con_4"><a href="{{ route('product', 4) }}">西门子自控产品</a></li>
+                        <li style="cursor: pointer;" onclick="window.location.href='/product/7'" class="tj_con_1"><a href="{{ route('product', 7) }}">传感器产品</a></li>
+                        <li style="cursor: pointer;" onclick="window.location.href='/product/6'" class="tj_con_2"><a href="{{ route('product', 6) }}">恒温恒湿控制柜</a></li>
+                        <li style="cursor: pointer;" onclick="window.location.href='/product/2'" class="tj_con_3"><a href="{{ route('product', 2) }}">霍尼韦尔自控产品</a></li>
+                        <li style="cursor: pointer;" onclick="window.location.href='/product/4'" class="tj_con_4"><a href="{{ route('product', 4) }}">西门子自控产品</a></li>
                     </ul>
                 </div>
 
